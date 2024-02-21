@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "69d79696-5938-4caa-bed4-735382c91069",
+		"name": "auth_test_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17075810",
+		"_collection_link": "https://blue-shadow-50292.postman.co/workspace/Team-Workspace~1d35c9dc-0972-4d36-844f-848c7db25a02/collection/27780846-69d79696-5938-4caa-bed4-735382c91069?action=share&source=collection_link&creator=17075810"
+	},
+	"item": [
+		{
+			"name": "user_create",
+			"protocolProfileBehavior": {
+				"followRedirects": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "name",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://sub9.localhost/api/users?name=ahmed&email=test@test5.com&password=123",
+					"protocol": "http",
+					"host": [
+						"sub9",
+						"localhost"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ahmed"
+						},
+						{
+							"key": "email",
+							"value": "test@test5.com"
+						},
+						{
+							"key": "password",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tokens_listing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://sub9.localhost/api/tokens"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://sub9.localhost/api/tokens?remember=true&email=test@test3.com&password=123",
+					"protocol": "http",
+					"host": [
+						"sub9",
+						"localhost"
+					],
+					"path": [
+						"api",
+						"tokens"
+					],
+					"query": [
+						{
+							"key": "remember",
+							"value": "true"
+						},
+						{
+							"key": "email",
+							"value": "test@test3.com"
+						},
+						{
+							"key": "password",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://sub9.localhost/api/tokens?_method=delete&id[]=1&id[]=2&id[]=16",
+					"protocol": "http",
+					"host": [
+						"sub9",
+						"localhost"
+					],
+					"path": [
+						"api",
+						"tokens"
+					],
+					"query": [
+						{
+							"key": "_method",
+							"value": "delete"
+						},
+						{
+							"key": "id[]",
+							"value": "1"
+						},
+						{
+							"key": "id[]",
+							"value": "2"
+						},
+						{
+							"key": "id[]",
+							"value": "16"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_logged_user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://sub9.localhost/api/user"
+			},
+			"response": []
+		}
+	]
+}
