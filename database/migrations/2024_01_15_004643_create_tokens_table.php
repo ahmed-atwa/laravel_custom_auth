@@ -17,13 +17,13 @@ return new class extends Migration
             $table->string('token', 250)->unique('unique_token');
             //don't restrict the query to user-agent and ip-address,
             //instead use this only to display logged devices with details if needed.
-            $table->string('agent', 250);  //browser user-agent
+            $table->string('agent', 250)->nullable();  //browser user-agent
             $table->string('ip', 250); //ip address
-            
+
             //$table->dateTime('created_at');
             $table->timestamps();
 
-            $table->foreign('user_id', 'fk1_user')
+            $table->foreign('user_id', 'fk_user')
 					->references('id')->on('users')
 					->onUpdate('cascade')
 					->onDelete('cascade');
