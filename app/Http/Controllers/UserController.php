@@ -46,7 +46,7 @@ class UserController extends Controller
         return [
             'usersStoreSuccess' => [
                 'user' => $user,
-                'token' => $user->getRememberToken(),
+                'token' => \Auth::getToken(),//$user->getRememberToken(),
             ]
         ];
     }

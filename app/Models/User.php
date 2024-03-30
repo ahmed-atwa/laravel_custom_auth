@@ -79,7 +79,6 @@ class User extends Model implements
      * @return \App\Models\Token|null
     */
     public function getRememberToken(){
-        //return \Auth::getToken();
         throw new \Exception('implement if needed! '.__FUNCTION__);
     }
 
