@@ -86,7 +86,10 @@ class User extends Model implements
         //return "username";
         throw new \Exception('implement if needed! '.__FUNCTION__);
     }
-    public function getAuthIdentifier(){throw new \Exception('implement if needed! '.__FUNCTION__);}
+    public function getAuthIdentifier(){
+        return $this->id;
+        //throw new \Exception('implement if needed! '.__FUNCTION__);
+    }
     public function setRememberToken($value){throw new \Exception('implement if needed! '.__FUNCTION__);}
     public function getRememberTokenName(){throw new \Exception('implement if needed! '.__FUNCTION__);}
 }
